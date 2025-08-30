@@ -12,6 +12,14 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y tmux 
 
+dnf5 install -y xrdp
+systemctl enable xrdp
+
+dnf5 install -y ffmpeg ffmpeg-libs gstreamer1-libav gstreamer1-plugin-openh264 gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly
+
+#firewall-cmd --add-port=3389/tcp
+#firewall-cmd --runtime-to-permanent
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
