@@ -12,6 +12,11 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y tmux 
 
+dnf5 install -y xrdp
+systemctl enable xrdp
+
+dnf5 install -y https://www.rpmfind.net/linux/opensuse/tumbleweed/repo/oss/x86_64/pipewire-module-xrdp-0~git19-1.7.x86_64.rpm
+
 #firewall-cmd --add-port=3389/tcp
 #firewall-cmd --runtime-to-permanent
 
