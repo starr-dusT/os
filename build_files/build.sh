@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -ouex pipefail
 
@@ -10,15 +10,9 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux 
+dnf5 install -y tmux chromium
 
-dnf5 install -y xrdp
-systemctl enable xrdp
-
-dnf5 install -y https://www.rpmfind.net/linux/opensuse/tumbleweed/repo/oss/x86_64/pipewire-module-xrdp-0~git19-1.7.x86_64.rpm
-
-#firewall-cmd --add-port=3389/tcp
-#firewall-cmd --runtime-to-permanent
+/ctx/desktop/gnome.sh
 
 # Use a COPR Example:
 #
