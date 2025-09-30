@@ -10,7 +10,7 @@ install_gnome_extension(){
 # gnome extensions
 rm -R /usr/share/gnome-shell/extensions/*
 install_gnome_extension https://github.com/starr-dusT/gnome-set-panel-monitor/archive/refs/heads/master.zip gnome-set-panel-monitor@tstarr.us
-chmod -R 644 /usr/share/gnome-shell/extensions
+chmod -R 755 /usr/share/gnome-shell/extensions
 
 # dconf setup
 tee /etc/dconf/db/local.d/02-test <<'EOF'
