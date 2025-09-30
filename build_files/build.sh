@@ -13,6 +13,7 @@ set -ouex pipefail
 dnf5 install -y tmux chromium
 
 /ctx/desktop/gnome.sh
+/ctx/devel/programming.sh
 
 # Use a COPR Example:
 #
