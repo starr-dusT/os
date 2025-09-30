@@ -5,7 +5,7 @@ set -ouex pipefail
 install_gnome_extension(){
     wget "$1" -O /tmp/ext.zip
     unzip -j /tmp/ext.zip -d "/usr/share/gnome-shell/extensions/$2"
-    cp "/usr/share/gnome-shell/extensions/org.gnome.shell.extensions.$2.gschema.xml" /usr/share/glib-2.0/schemas/
+    cp "/usr/share/gnome-shell/extensions/$2/org.gnome.shell.extensions.$2.gschema.xml" /usr/share/glib-2.0/schemas/
 }
 
 # gnome extensions
